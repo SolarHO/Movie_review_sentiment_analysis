@@ -1,0 +1,16 @@
+{
+  "exp_name": "exp1_baseline",
+  "timestamp": "2025-12-05T09:46:02.706610",
+  "params": {
+    "model_name": "skt/kobert-base-v1",
+    "max_length": 128,
+    "batch_size": 16,
+    "epochs": 1,
+    "lr": 5e-05
+  },
+  "metrics": {
+    "train_loss": 0.6946696669769287,
+    "val_acc": 0.5034502070124207,
+    "val_f1": 0.3348632396764581
+  }
+}
