@@ -30,9 +30,7 @@
 Movie_review_sentiment_analysis/
   ├─ kobert_nsmc_exp2/              # Fine-tuned KoBERT 모델 (LFS)
   ├─ koelectra_nsmc_exp1/           # Fine-tuned KoELECTRA 모델 (LFS)
-  ├─ nsmc_train_kobert.ipynb        # KoBERT 학습 노트북
-  ├─ nsmc_train_koelectra.ipynb     # KoELECTRA 학습 노트북
-  ├─ inference_cpu.py               # CPU 환경 추론 스크립트
+  ├─ nsmc_train_KoBERT_KoELECTRA.ipynb     # KoBERT,KoELECTRA 학습 노트북
   └─ README.md
 ```
 
