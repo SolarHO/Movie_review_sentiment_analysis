@@ -85,6 +85,35 @@ id      document        label
 | LR         | 5e-5(KoBERT), 3e-5(KoELECTRA) |
 | Epochs     | 3                             |
 | Loss       | Cross Entropy                 |
+### KoBERT
+```
+MODEL_NAME = "monologg/kobert"
+
+tokenizer = AutoTokenizer.from_pretrained(
+    MODEL_NAME,
+    trust_remote_code=True,
+)
+
+MAX_LEN = 128
+BATCH_SIZE = 32
+EPOCHS = 3
+LR = 5e-5
+```
+### KoELECTRA
+```
+MODEL_NAME = "monologg/koelectra-base-v3-discriminator"
+
+tokenizer_elec = AutoTokenizer.from_pretrained(
+    MODEL_NAME,
+    use_fast=True,          # fast tokenizer
+    trust_remote_code=True,
+)
+
+MAX_LEN = 128
+BATCH_SIZE = 32
+EPOCHS = 3
+LR = 3e-5
+```
 
 **Colab 무료 GPU 환경에서는 Train데이터의 제한을 두지 않았을 시(150,000개) 학습 도중 할당량 제한으로 다운되는 경우 발생!**
 ```
