@@ -6,7 +6,7 @@
 
 ---
 
-**한국어 영화 리뷰(NSMC)를 기반으로 KoBERT / KoELECTRA 모델을 파인튜닝하여 문장 단위 감성을 분류하는 프로젝트입니다.**
+**한국어 영화 리뷰(NSMC)를 기반으로 KoBERT / KoELECTRA 모델을 사용용하여 문장 단위 감성을 분류하는 프로젝트입니다.**
 <br>(이진 분류: 긍정 / 부정)
 
 ---
@@ -85,6 +85,14 @@ id      document        label
 | LR         | 5e-5(KoBERT), 3e-5(KoELECTRA) |
 | Epochs     | 3                             |
 | Loss       | Cross Entropy                 |
+
+**Colab 무료 GPU 환경에서는 Train데이터의 제한을 두지 않았을 시(150,000개) 학습 도중 할당량 제한으로 다운되는 경우 발생!**
+```
+TRAIN_SIZE = 50000
+
+small_train_df = train_df.sample(n=TRAIN_SIZE, random_state=42)
+```
+Train데이터의 사이즈를 5만개로 제한하여 학습 용이성 확보
 
 ---
 
